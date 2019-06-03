@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import rospy
-import math
 from rdda.msg import JointCommands
 from rdda.msg import JointStates
 
@@ -34,10 +33,4 @@ class Gripper:
         #cmd.tg_pos[1] = 0.5
         rospy.sleep(0.5)
 
-        """
-        while not rospy.is_shutdown():
-            if len(msg.tg_pos):
-                msg.tg_pos[0] = pos
-            else:
-                msg.tg_pos.append(pos)
-        """
+
