@@ -18,6 +18,11 @@ class Gripper:
         self.status = states
         rospy.loginfo("Actual position[0]: %lf", self.status.act_pos[0])
 
+    def setGripperVel(self, ang_vel):
+        """Set angular velocity """
+        self.gripperPub.tg_pos = ang_vel
+
+"""
     def closeGripper(self):
         print 'Closing gripper ...'
         cmd = JointCommands()
@@ -29,8 +34,10 @@ class Gripper:
     def openGripper(self):
         print 'Open gripper ...'
         cmd = JointCommands()
-        #cmd.tg_pos[0] = 0.5
-        #cmd.tg_pos[1] = 0.5
+        cmd.tg_pos[0] = -0.5
+        cmd.tg_pos[1] = -0.5
         rospy.sleep(0.5)
+"""
+
 
 
