@@ -16,7 +16,7 @@ def main():
     while not rospy.is_shutdown():
         vel_ref[0] = -4.0 * np.sin(time_interval)
         vel_ref[1] = 0.0
-        time_interval += 0.5e-3
+        time_interval += 2e-3
         cmds.vel_sat = vel_ref
         gripper.gripperPub.publish(cmds)
         rate.sleep()
