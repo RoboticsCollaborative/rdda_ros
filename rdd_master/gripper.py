@@ -18,5 +18,5 @@ class Gripper:
     def updateJointStates(self, states):
         """Obtain the status of the gripper."""
         self.status = states
-        rospy.loginfo("Actual position[0]: %lf", self.status.act_pos[0])
+        #rospy.loginfo("ref_pos[0]: %lf", self.status.act_pos[0])
 
