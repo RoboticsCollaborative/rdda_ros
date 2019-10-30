@@ -66,14 +66,3 @@ class Gripper:
             print("origins: {}".format(origin))
         else:
             print("Need home.")
-
-
-    """ Fingers go to lower bounds. """
-    def open(self):
-        has_home = rospy.get_param('/has_home')
-        if has_home:
-            lower_bounds = rospy.get_param('/lower_bounds')
-            self.set_positions(lower_bounds)
-        else:
-            print("Need home.")
-
