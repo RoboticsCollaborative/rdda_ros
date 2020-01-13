@@ -9,7 +9,6 @@ def main():
     gripper = Gripper()
     rospy.init_node('gripper_node', anonymous=True)
     rate = rospy.Rate(500)
-<<<<<<< HEAD
     cmds = JointCommands()
 #    time_interval = 0.0
 #    vel_ref = np.array([0.0, 0.0])
@@ -24,7 +23,6 @@ def main():
 	cmds.pos_ref = pos_ref
 	cmds.stiffness = stiffness
         gripper.gripperPub.publish(cmds)
-=======
     joint_cmds = JointCommands()
     time_interval = 0.0
     pos_ref = np.array([0.0, 0.0])
@@ -43,7 +41,6 @@ def main():
         joint_cmds.freq_anti_alias = freq_anti_alias
         gripper.gripperPub.publish(joint_cmds)
         rospy.loginfo("pos_ref[0]: {}".format(joint_cmds.pos_ref[0]))
->>>>>>> origin/master
         rate.sleep()
 
 
